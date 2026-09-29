@@ -26,8 +26,7 @@ def _workbook() -> Path:
     found = 发现框架路径()
     if found is not None and found.is_file():
         return found
-    here = Path(__file__).resolve()
-    return here.parent.parent.parent / "数值框架" / "战斗数值框架.xlsx"
+    return (Path.cwd() / "战斗数值框架.xlsx").resolve()
 
 
 SIM_WORKBOOK = _workbook()
