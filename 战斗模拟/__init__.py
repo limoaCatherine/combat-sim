@@ -1,5 +1,8 @@
-"""战斗离散事件仿真。"""
-from 战斗模拟.内核.引擎 import 战斗引擎
-from 战斗模拟.内核.事件 import 事件, 事件调度器
+"""战斗模拟：读框架表，按行为规则打一场，可写回运行结果。"""
+from __future__ import annotations
 
-__all__ = ["战斗引擎", "事件", "事件调度器"]
+__version__ = "5.0.0"
+
+from 战斗模拟.pipeline import run
+
+__all__ = ["run"]
